@@ -26,8 +26,8 @@ jobs:
           cd MiniumApps
           chmod +x gradlew
           ./gradlew :launcher3:assembleAlphaDebug
-          
+
     - name: Save built apk
       uses: actions/upload-artifact@v2
       with:
-        path: MiniumApps/launcher3/build/outputs/apk/beta/debug/*.apk
+        path: MinimumApps/launcher3/build/outputs/apk/beta/debug/*.apk
