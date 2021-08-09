@@ -30,4 +30,4 @@ jobs:
     - name: Save built apk
       uses: actions/upload-artifact@v2
       with:
-        path: MinimumApps/launcher3/build/outputs/apk/beta/debug/*.apk
+        path: MiniumApps/launcher3/build/outputs/apk/alpha/debug/launcher3-alpha-debug.apk
