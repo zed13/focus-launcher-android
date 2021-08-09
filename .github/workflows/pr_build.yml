@@ -20,19 +20,14 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
 
-#     - name: Go to working dir
-      
-
-    # - name: Grant execute permission for gradlew
-    #   run: chmod +x gradlew
     - name: Build with Gradle
       run: |
+          echo "Going to working dir MinimumApps"
           cd MiniumApps
-          echo "New working dir is `pwd`"
-          echo "New working dir content"
-          ls -la
+          chmod +x gradlew
           ./gradlew :launcher3:assembleAlphaDebug
+          
     - name: Save built apk
       uses: actions/upload-artifact@v2
       with:
-        path: launcher3/build/outputs/apk/beta/debug/*.apk
+        path: MiniumApps/launcher3/build/outputs/apk/beta/debug/*.apk
