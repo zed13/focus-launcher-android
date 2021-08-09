@@ -16,7 +16,7 @@ jobs:
     - name: Go to working dir
       run: |
           pwd
-          ll
+          ls -la
           cd MinimumApp
     - name: set up JDK 8
       uses: actions/setup-java@v2
