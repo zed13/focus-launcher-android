@@ -212,26 +212,26 @@ public class MainFragmentMediator {
                             case 2:
                                 if (router != null && fragment != null) {
                                     String inputStr = TokenManager.getInstance().getCurrent().getTitle();
-                                    if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.beta))
-                                            && inputStr.equalsIgnoreCase(Constants.ALPHA_SETTING)) {
-                                        if (PrefSiempo.getInstance(context).read(PrefSiempo
-                                                .IS_ALPHA_SETTING_ENABLE, false)) {
-                                            router.createNote(fragment.getActivity());
-                                            FirebaseHelper.getInstance().logIFAction(FirebaseHelper.ACTION_SAVE_NOTE, "", data);
-                                            new ActivityHelper(context).openNotesApp(true);
-                                            EventBus.getDefault().post(new SendSmsEvent(true));
-                                        } else {
-                                            PrefSiempo.getInstance(context).write(PrefSiempo
-                                                    .IS_ALPHA_SETTING_ENABLE, true);
-                                            new ActivityHelper(context).openSiempoAlphaSettingsApp();
-                                            TokenManager.getInstance().clear();
-                                        }
-                                    } else {
+//                                    if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.beta))
+//                                            && inputStr.equalsIgnoreCase(Constants.ALPHA_SETTING)) {
+//                                        if (PrefSiempo.getInstance(context).read(PrefSiempo
+//                                                .IS_ALPHA_SETTING_ENABLE, false)) {
+//                                            router.createNote(fragment.getActivity());
+//                                            FirebaseHelper.getInstance().logIFAction(FirebaseHelper.ACTION_SAVE_NOTE, "", data);
+//                                            new ActivityHelper(context).openNotesApp(true);
+//                                            EventBus.getDefault().post(new SendSmsEvent(true));
+//                                        } else {
+//                                            PrefSiempo.getInstance(context).write(PrefSiempo
+//                                                    .IS_ALPHA_SETTING_ENABLE, true);
+//                                            new ActivityHelper(context).openSiempoAlphaSettingsApp();
+//                                            TokenManager.getInstance().clear();
+//                                        }
+//                                    } else {
                                         router.createNote(fragment.getActivity());
                                         FirebaseHelper.getInstance().logIFAction(FirebaseHelper.ACTION_SAVE_NOTE, "", data);
                                         new ActivityHelper(context).openNotesApp(true);
                                         EventBus.getDefault().post(new SendSmsEvent(true));
-                                    }
+//                                    }
                                 }
                                 break;
                             //Write code for Junk Food Pane on this code

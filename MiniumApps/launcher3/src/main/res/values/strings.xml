@@ -302,6 +302,7 @@
     <string name="feedback_success_message">Thank you for your feedback! We read every message, and we try to respond to them as soon as we can. We\'re a small team, so please be patient with us.</string>
     <string name="feedback_email_sent">Thanks for your feedback!  Focus launcher support ID: </string>
     <string name="app_version_alpha">Focus launcher version : ALPHA-</string>
+    <string name="app_version">Focus launcher version : </string>
     <string name="app_version_beta">Focus launcher version : BETA-</string>
 
 
