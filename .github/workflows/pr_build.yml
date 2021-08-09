@@ -29,9 +29,9 @@ jobs:
           echo "New working dir is `pwd`"
           echo "New working dir content"
           ls -la
-          
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+
+    # - name: Grant execute permission for gradlew
+    #   run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew assemble
     - name: Save built apk
