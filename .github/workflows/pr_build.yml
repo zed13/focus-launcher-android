@@ -24,10 +24,12 @@ jobs:
       run: |
           echo "Going to working dir MinimumApps"
           cd MiniumApps
+          echo "Add execution right to gradlew script"
           chmod +x gradlew
+          echo "Start alpha debug build"
           ./gradlew :launcher3:assembleAlphaDebug
 
     - name: Save built apk
       uses: actions/upload-artifact@v2
       with:
-        path: MiniumApps/launcher3/build/outputs/apk/alpha/debug/launcher3*.apk
+        path: MiniumApps/launcher3/build/outputs/apk/debug/launcher3*.apk
