@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Go to working dir
       run: cd MiniumApps/
-          | pwd
+          | tree
     - name: set up JDK 8
       uses: actions/setup-java@v2
       with:
