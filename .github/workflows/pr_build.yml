@@ -20,6 +20,8 @@ jobs:
           ls -la
           cd MiniumApps
           echo "New working dir is `pwd`"
+          echo "New working dir content"
+          ls -la
     - name: set up JDK 8
       uses: actions/setup-java@v2
       with:
