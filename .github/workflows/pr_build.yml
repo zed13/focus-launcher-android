@@ -15,9 +15,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: Go to working dir
       run: |
-          pwd
+          echo "Working dir is `pwd`"
+          echo "Working dir content:"
           ls -la
           cd MiniumApps
+          echo "New working dir is `pwd`"
     - name: set up JDK 8
       uses: actions/setup-java@v2
       with:
