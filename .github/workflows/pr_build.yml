@@ -27,7 +27,7 @@ jobs:
           echo "Add execution right to gradlew script"
           chmod +x gradlew
           echo "Start alpha debug build"
-          ./gradlew :launcher3:assembleAlphaDebug
+          ./gradlew :launcher3:assembleDebug
 
     - name: Save built apk
       uses: actions/upload-artifact@v2
