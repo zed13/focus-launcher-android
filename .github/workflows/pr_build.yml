@@ -20,7 +20,7 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
 
-    - name: Go to working dir
+#     - name: Go to working dir
       
 
     # - name: Grant execute permission for gradlew
