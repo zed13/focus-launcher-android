@@ -1,8 +1,21 @@
+import java.time.ZoneId
+import java.time.ZoneOffset
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.DateTimeFormatterBuilder
+
 apply plugin: 'com.android.application'
 //apply plugin: 'com.android.library'
 //apply plugin: 'com.neenbedankt.android-apt'
 //apply plugin: 'io.fabric'
 apply plugin: 'org.greenrobot.greendao'
+
+
+Integer generateVersionCode() {
+    return DateTimeFormatter.ofPattern("YYMMddHHmm")
+            .format(ZonedDateTime.now(ZoneOffset.UTC))
+            .toInteger()
+}
 
 
 android {
@@ -17,7 +30,8 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         multiDexEnabled true
-        versionCode 2
+        versionName "1.0.1"
+        versionCode generateVersionCode()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         defaultConfig {
             vectorDrawables.useSupportLibrary = true
@@ -29,7 +43,6 @@ android {
                 includeCompileClasspath false
             }
         }
-        versionName "1.0.1"
     }
     buildTypes {
         debug {
