@@ -569,13 +569,13 @@ public class DashboardActivity extends CoreActivity {
             activeNetwork = connectivityManager.getActiveNetworkInfo();
         }
         if (activeNetwork != null) {
-            if (BuildConfig.FLAVOR.equalsIgnoreCase(getString(R.string.alpha))) {
-                ApiClient_.getInstance_(DashboardActivity.this)
-                        .checkAppVersion(CheckVersionEvent.ALPHA);
-            } else if (BuildConfig.FLAVOR.equalsIgnoreCase(getString(R.string.beta))) {
-                ApiClient_.getInstance_(DashboardActivity.this)
-                        .checkAppVersion(CheckVersionEvent.BETA);
-            }
+//            if (BuildConfig.FLAVOR.equalsIgnoreCase(getString(R.string.alpha))) {
+//                ApiClient_.getInstance_(DashboardActivity.this)
+//                        .checkAppVersion(CheckVersionEvent.ALPHA);
+//            } else if (BuildConfig.FLAVOR.equalsIgnoreCase(getString(R.string.beta))) {
+//                ApiClient_.getInstance_(DashboardActivity.this)
+//                        .checkAppVersion(CheckVersionEvent.BETA);
+//            }
         } else {
             Log.d(TAG, getString(R.string.nointernetconnection));
         }

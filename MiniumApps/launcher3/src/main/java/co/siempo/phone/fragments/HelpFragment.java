@@ -102,12 +102,12 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
         relLeaveReview.setOnClickListener(this);
 
 
-        String version = "";
-        if (BuildConfig.FLAVOR.equalsIgnoreCase(getActivity().getString(R.string.alpha))) {
-            version = getString(R.string.app_version_alpha) + BuildConfig.VERSION_NAME;
-        } else if (BuildConfig.FLAVOR.equalsIgnoreCase(getActivity().getString(R.string.beta))) {
-            version = getString(R.string.app_version_beta) + BuildConfig.VERSION_NAME;
-        }
+        String version = getString(R.string.app_version) + BuildConfig.VERSION_NAME;
+//        if (BuildConfig.FLAVOR.equalsIgnoreCase(getActivity().getString(R.string.alpha))) {
+//            version = getString(R.string.app_version_alpha) + BuildConfig.VERSION_NAME;
+//        } else if (BuildConfig.FLAVOR.equalsIgnoreCase(getActivity().getString(R.string.beta))) {
+//            version = getString(R.string.app_version_beta) + BuildConfig.VERSION_NAME;
+//        }
         txtVersionValue.setText("" + version);
 
 
@@ -191,13 +191,13 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
                 progressDialog.setMessage("Loading...");
                 progressDialog.show();
             }
-            if (BuildConfig.FLAVOR.equalsIgnoreCase(getString(R.string.alpha))) {
-                ApiClient_.getInstance_(getActivity())
-                        .checkAppVersion(CheckVersionEvent.ALPHA);
-            } else if (BuildConfig.FLAVOR.equalsIgnoreCase(getString(R.string.beta))) {
-                ApiClient_.getInstance_(getActivity())
-                        .checkAppVersion(CheckVersionEvent.BETA);
-            }
+//            if (BuildConfig.FLAVOR.equalsIgnoreCase(getString(R.string.alpha))) {
+//                ApiClient_.getInstance_(getActivity())
+//                        .checkAppVersion(CheckVersionEvent.ALPHA);
+//            } else if (BuildConfig.FLAVOR.equalsIgnoreCase(getString(R.string.beta))) {
+//                ApiClient_.getInstance_(getActivity())
+//                        .checkAppVersion(CheckVersionEvent.BETA);
+//            }
         } else {
             Log.d(TAG, getString(R.string.nointernetconnection));
         }

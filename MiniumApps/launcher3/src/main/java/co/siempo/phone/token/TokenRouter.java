@@ -65,29 +65,29 @@ public class TokenRouter {
 
     public void createContact(Context context) {
         String inputStr = TokenManager.getInstance().getCurrent().getTitle();
-        if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.beta)) && inputStr.equalsIgnoreCase(Constants.ALPHA_SETTING)) {
-            if (PrefSiempo.getInstance(context).read(PrefSiempo
-                    .IS_ALPHA_SETTING_ENABLE, false)) {
-                if (PhoneNumberUtils.isGlobalPhoneNumber(inputStr)) {
-                    context.startActivity(new Intent(Intent.ACTION_INSERT).setType(ContactsContract.Contacts.CONTENT_TYPE).putExtra(ContactsContract.Intents.Insert.PHONE, inputStr));
-                } else {
-                    context.startActivity(new Intent(Intent.ACTION_INSERT).setType(ContactsContract.Contacts.CONTENT_TYPE).putExtra(ContactsContract.Intents.Insert.NAME, inputStr));
-                }
-                TokenManager.getInstance().clear();
-            } else {
-                PrefSiempo.getInstance(context).write(PrefSiempo
-                        .IS_ALPHA_SETTING_ENABLE, true);
-                new ActivityHelper(context).openSiempoAlphaSettingsApp();
-                TokenManager.getInstance().clear();
-            }
-        } else {
+//        if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.beta)) && inputStr.equalsIgnoreCase(Constants.ALPHA_SETTING)) {
+//            if (PrefSiempo.getInstance(context).read(PrefSiempo
+//                    .IS_ALPHA_SETTING_ENABLE, false)) {
+//                if (PhoneNumberUtils.isGlobalPhoneNumber(inputStr)) {
+//                    context.startActivity(new Intent(Intent.ACTION_INSERT).setType(ContactsContract.Contacts.CONTENT_TYPE).putExtra(ContactsContract.Intents.Insert.PHONE, inputStr));
+//                } else {
+//                    context.startActivity(new Intent(Intent.ACTION_INSERT).setType(ContactsContract.Contacts.CONTENT_TYPE).putExtra(ContactsContract.Intents.Insert.NAME, inputStr));
+//                }
+//                TokenManager.getInstance().clear();
+//            } else {
+//                PrefSiempo.getInstance(context).write(PrefSiempo
+//                        .IS_ALPHA_SETTING_ENABLE, true);
+//                new ActivityHelper(context).openSiempoAlphaSettingsApp();
+//                TokenManager.getInstance().clear();
+//            }
+//        } else {
             if (PhoneNumberUtils.isGlobalPhoneNumber(inputStr)) {
                 context.startActivity(new Intent(Intent.ACTION_INSERT).setType(ContactsContract.Contacts.CONTENT_TYPE).putExtra(ContactsContract.Intents.Insert.PHONE, inputStr));
             } else {
                 context.startActivity(new Intent(Intent.ACTION_INSERT).setType(ContactsContract.Contacts.CONTENT_TYPE).putExtra(ContactsContract.Intents.Insert.NAME, inputStr));
             }
             TokenManager.getInstance().clear();
-        }
+//        }
 
     }
 

@@ -53,7 +53,8 @@ public class TempoSettingsFragment extends CoreFragment {
         });
 
 
-        if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.alpha))) {
+//        if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.alpha))) {
+        if (false) {
             relAlphaSettings.setVisibility(View.VISIBLE);
         } else {
             if (PrefSiempo.getInstance(context).read(PrefSiempo

@@ -62,7 +62,7 @@ public class Launcher3App extends CoreApplication {
                 + " || Version name: " + BuildConfig.VERSION_NAME
                 + "\nGit Sha: " + BuildConfig.GIT_SHA
                 + " || Build time:  " + BuildConfig.BUILD_TIME
-                + " || Build flavor: " + BuildConfig.FLAVOR
+//                + " || Build flavor: " + BuildConfig.FLAVOR
                 + " || Build type: " + BuildConfig.BUILD_TYPE);
 
         Tracer.i("Model: " + Build.MODEL

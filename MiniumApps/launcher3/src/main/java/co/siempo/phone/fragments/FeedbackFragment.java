@@ -99,13 +99,12 @@ public class FeedbackFragment extends CoreFragment {
                                     .USER_EMAILID, edt_email.getText().toString().trim());
                         }
                         try {
-                            String version = "";
-                            if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.alpha))) {
-                                version = "ALPHA-" + BuildConfig.VERSION_NAME;
-                            } else if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.beta))) {
-                                version = "BETA-" + BuildConfig.VERSION_NAME;
-                            }
-
+                            String version = BuildConfig.VERSION_NAME;
+//                            if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.alpha))) {
+//                                version = "ALPHA-" + BuildConfig.VERSION_NAME;
+//                            } else if (BuildConfig.FLAVOR.equalsIgnoreCase(context.getString(R.string.beta))) {
+//                                version = "BETA-" + BuildConfig.VERSION_NAME;
+//                            }
 
                             String body = "User Email :" + PrefSiempo.getInstance(context).read(PrefSiempo
                                     .USER_EMAILID, "") + "\nFeedBack Type : " + selectedItemText + "\n" +
@@ -116,8 +115,6 @@ public class FeedbackFragment extends CoreFragment {
                                     ", Display - " + getScreenResolution(getActivity()) + "\n" +
                                     "App AlarmData : UserID - " + CoreApplication.getInstance().getDeviceId() +
                                     ", Version - " + version;
-
-
 
 
                             //Creating SendMail object
