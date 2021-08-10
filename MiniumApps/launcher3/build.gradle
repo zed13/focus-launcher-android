@@ -17,7 +17,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         multiDexEnabled true
-        versionCode 2
+        versionCode 3
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         defaultConfig {
             vectorDrawables.useSupportLibrary = true
@@ -50,11 +50,11 @@ android {
     productFlavors {
         alpha {
             dimension "type"
-            versionName "1.0.1"
+            versionName "1.0.2"
         }
         beta {
             dimension "type"
-            versionName "1.0.1"
+            versionName "1.0.2"
         }
     }
 
